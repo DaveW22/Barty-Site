@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Barty | Smarter grocery savings</title>
+  <meta
+    name="description"
+    content="Learn about Barty and our mission to help households make smarter grocery decisions and save more every week."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #f3f6f8;
+      --bg-soft: #eaf2f0;
+      --text: #0f172a;
+      --muted: #475569;
+      --brand: #0b7a5d;
+      --brand-strong: #085e48;
+      --brand-soft: #e7f7f2;
+      --border: rgba(11, 122, 93, 0.16);
+      --shadow: 0 20px 48px rgba(8, 94, 72, 0.14);
+      --shadow-soft: 0 12px 28px rgba(8, 94, 72, 0.08);
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(11, 122, 93, 0.12), transparent 36%),
+        radial-gradient(circle at 90% 8%, rgba(15, 118, 110, 0.1), transparent 30%),
+        linear-gradient(180deg, var(--bg), var(--bg-soft) 42%, var(--bg));
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    .brand {
+      font-family: "Sora", "Manrope", "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(243, 246, 248, 0.86);
+      border-bottom: 1px solid rgba(11, 122, 93, 0.1);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.06rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, var(--brand), #0c8a69);
+      color: #fff;
+      box-shadow: 0 12px 22px rgba(8, 94, 72, 0.32);
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.72rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.9);
+      font-weight: 700;
+    }
+
+    .about-page {
+      min-height: calc(100vh - 74px);
+      padding: 3.8rem 0;
+    }
+
+    .about-page-shell {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2rem 2rem 2.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .about-page-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand-strong);
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .about-page h1 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(2.1rem, 5vw, 3.5rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+      max-width: 18ch;
+    }
+
+    .about-page p,
+    .about-section p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 66ch;
+      font-size: 1rem;
+      line-height: 1.68;
+    }
+
+    .about-page-points {
+      margin-top: 1.2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .about-page-point {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fcfffe;
+      padding: 0.8rem;
+      font-size: 0.91rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .content-grid {
+      margin-top: 1.7rem;
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .about-toc {
+      position: sticky;
+      top: 92px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(252, 255, 254, 0.92);
+      padding: 0.8rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-toc h3 {
+      margin: 0 0 0.55rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .about-toc a {
+      display: block;
+      border-radius: 10px;
+      padding: 0.45rem 0.55rem;
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.35;
+    }
+
+    .about-toc a:hover {
+      background: var(--brand-soft);
+      color: var(--brand-strong);
+    }
+
+    .about-main {
+      min-width: 0;
+    }
+
+    .about-sections {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .about-section {
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.3rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-section h2 {
+      margin: 0 0 0.6rem;
+      font-size: 1.32rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .about-section h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.02rem;
+      color: var(--brand);
+      letter-spacing: -0.01em;
+    }
+
+    .about-list {
+      margin: 0.65rem 0 0;
+      padding-left: 1.1rem;
+      color: var(--text);
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .about-list li {
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .values-grid {
+      margin-top: 0.8rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.7rem;
+    }
+
+    .value-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fcfffe;
+      padding: 0.8rem;
+    }
+
+    .value-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.94rem;
+    }
+
+    .value-card p {
+      font-size: 0.92rem;
+    }
+
+    .about-signoff {
+      margin-top: 1.1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      display: grid;
+      gap: 0.65rem;
+      text-align: center;
+    }
+
+    .about-signoff h3 {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .about-signoff p {
+      margin: 0;
+      max-width: none;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .about-page-points {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links a:not(.btn) {
+        display: none;
+      }
+
+      .about-page-shell {
+        padding: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Barty home">
+        <span class="brand-mark">B</span>
+        <span>Barty</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#why-barty">Why Barty</a>
+        <a href="about.html">About Barty</a>
+        <a href="index.html#download" class="btn">Join early access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-page" aria-label="About Barty page">
+      <div class="container">
+        <div class="about-page-shell">
+          <div class="about-page-eyebrow">About Barty</div>
+          <h1>Smarter shopping. Real savings. Built for everyday life.</h1>
+          <p>
+            Barty helps people cut through the noise of modern grocery shopping by comparing prices, optimising baskets, simplifying loyalty, and showing exactly where savings can be made.
+          </p>
+          <p>
+            In a world of changing prices, fragmented offers, and rising costs, Barty exists to give power back to the shopper. Save money with clarity, not effort.
+          </p>
+
+          <div class="about-page-points">
+            <div class="about-page-point">Basket-level comparison over marketing noise and headline discounts.</div>
+            <div class="about-page-point">Transparent savings visibility before checkout, not after.</div>
+            <div class="about-page-point">Built to reduce overspending while keeping shopping decisions simple.</div>
+          </div>
+
+          <div class="content-grid">
+            <aside class="about-toc" aria-label="About page table of contents">
+              <h3>On this page</h3>
+              <a href="#problem">The Problem</a>
+              <a href="#what-barty-does">What Barty Does</a>
+              <a href="#our-belief">Our Belief</a>
+              <a href="#designed-for-trust">Designed for Trust</a>
+              <a href="#privacy-data">Privacy &amp; Data</a>
+              <a href="#built-by-eidos">Built by Eidos Group</a>
+              <a href="#our-values">Our Values</a>
+              <a href="#future-ambitions">Future Ambitions</a>
+              <a href="#access-opportunity">Access &amp; Opportunity</a>
+              <a href="#where-barty-is-going">Where Barty Is Going</a>
+              <a href="#bigger-picture">The Bigger Picture</a>
+            </aside>
+
+            <div class="about-main">
+              <div class="about-sections">
+            <section class="about-section" id="problem" aria-label="The Problem">
+              <h2>The Problem</h2>
+              <h3>Shopping has become harder than it should be</h3>
+              <p>Everyday shoppers are expected to navigate:</p>
+              <ul class="about-list">
+                <li>Constantly changing supermarket prices</li>
+                <li>Complicated loyalty schemes and offers</li>
+                <li>Different prices across multiple retailers</li>
+                <li>The pressure to shop smarter with less time</li>
+              </ul>
+              <p>Most people do not lack effort. They lack visibility. Barty was built to solve that.</p>
+            </section>
+
+            <section class="about-section" id="what-barty-does" aria-label="What Barty Does">
+              <h2>What Barty Does</h2>
+              <h3>A simpler, smarter way to shop</h3>
+              <p>With Barty, users can:</p>
+              <ul class="about-list">
+                <li>Compare supermarket prices clearly</li>
+                <li>Optimise a shopping list across one or multiple stores</li>
+                <li>See actual savings versus an unoptimised shop</li>
+                <li>Store loyalty cards in one place</li>
+                <li>Make better-value switches and substitutions</li>
+                <li>Build a more efficient way to shop over time</li>
+              </ul>
+              <p>No confusion. No wasted spend. No unnecessary friction.</p>
+            </section>
+
+            <section class="about-section" id="our-belief" aria-label="Our Belief">
+              <h2>Our Belief</h2>
+              <h3>Intelligence should benefit the customer</h3>
+              <p>Retailers use pricing systems, data models, and behavioural insights every day. We believe shoppers deserve tools that work just as hard for them.</p>
+              <p>Barty exists to rebalance that relationship by using intelligent systems to help users make informed, cost-saving decisions with confidence.</p>
+            </section>
+
+            <section class="about-section" id="designed-for-trust" aria-label="Designed for Trust">
+              <h2>Designed for Trust</h2>
+              <h3>Built for users, not incentives</h3>
+              <p>We work for the user, not the retailer. That means:</p>
+              <ul class="about-list">
+                <li>No hidden bias toward any store</li>
+                <li>No manipulated outcomes for commission-first decisions</li>
+                <li>No dark patterns</li>
+                <li>No misleading savings claims</li>
+                <li>Clear, honest results users can understand quickly</li>
+              </ul>
+              <p>Trust is not a marketing message. It is the product standard.</p>
+            </section>
+
+            <section class="about-section" id="privacy-data" aria-label="Privacy and Data">
+              <h2>Privacy & Data</h2>
+              <h3>Respect by design</h3>
+              <ul class="about-list">
+                <li>Collect only the data needed to make the service work</li>
+                <li>Give users control over what they add and keep</li>
+                <li>Never sell personal data</li>
+                <li>Use strong security practices across the platform</li>
+                <li>Align with UK GDPR and modern privacy expectations</li>
+              </ul>
+              <p>Where data helps improve the platform, we prioritise anonymised and aggregated insights wherever possible.</p>
+            </section>
+
+            <section class="about-section" id="built-by-eidos" aria-label="Built by Eidos Group">
+              <h2>Built by Eidos Group</h2>
+              <h3>A wider mission behind the product</h3>
+              <p>Barty is part of Eidos Group, focused on building technology that solves real-world problems in practical, responsible ways.</p>
+              <ul class="about-list">
+                <li>Remove friction</li>
+                <li>Improve daily life</li>
+                <li>Create tangible value</li>
+                <li>Open access, not create barriers</li>
+                <li>Contribute positively beyond the screen</li>
+              </ul>
+            </section>
+
+            <section class="about-section" id="our-values" aria-label="Our Values">
+              <h2>Our Values</h2>
+              <h3>The principles behind everything we build</h3>
+              <div class="values-grid">
+                <article class="value-card">
+                  <strong>Clarity over complexity</strong>
+                  <p>We turn complicated decisions into clear actions.</p>
+                </article>
+                <article class="value-card">
+                  <strong>User-first always</strong>
+                  <p>Every feature should create genuine value for the person using it.</p>
+                </article>
+                <article class="value-card">
+                  <strong>Honesty by design</strong>
+                  <p>What users see should reflect the truth of outcomes.</p>
+                </article>
+                <article class="value-card">
+                  <strong>Efficiency as a standard</strong>
+                  <p>Good technology should save time and reduce effort.</p>
+                </article>
+                <article class="value-card">
+                  <strong>Continuous improvement</strong>
+                  <p>We build, learn, refine, and improve with real-world use.</p>
+                </article>
+                <article class="value-card">
+                  <strong>Impact beyond profit</strong>
+                  <p>Success includes usefulness and contribution, not just growth.</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="about-section" id="future-ambitions" aria-label="Eidos Future Ambitions">
+              <h2>Eidos Future Ambitions</h2>
+              <h3>Building technology that gives back</h3>
+              <p>Our long-term ambition is to direct value where it is needed most through partnerships with charities, schools, and community organisations.</p>
+              <ul class="about-list">
+                <li>Support organisations helping people experiencing homelessness</li>
+                <li>Contribute toward initiatives that help feed school children</li>
+                <li>Partner with groups tackling cost-of-living pressures</li>
+                <li>Use insights responsibly to understand where support is needed</li>
+                <li>Turn commercial success into practical social value</li>
+              </ul>
+            </section>
+
+            <section class="about-section" id="access-opportunity" aria-label="Access and Opportunity">
+              <h2>Access, Opportunity, and Eidos Academy</h2>
+              <h3>Helping more people get into tech</h3>
+              <p>Our wider ambition includes pathways for people to enter technology through apprenticeships, mentoring, practical training, and real project exposure.</p>
+              <p>A core part of this vision is Eidos Academy, focused on opening doors for people with potential but without a clear starting point.</p>
+            </section>
+
+            <section class="about-section" id="where-barty-is-going" aria-label="Where Barty Is Going">
+              <h2>Where Barty Is Going</h2>
+              <h3>This is just the beginning</h3>
+              <ul class="about-list">
+                <li>Optimise a full shop instantly</li>
+                <li>Save more through smart substitutions</li>
+                <li>Move seamlessly across single-store or split-shop checkouts</li>
+                <li>Track savings over time</li>
+                <li>Use loyalty, price comparison, and recommendations in one place</li>
+              </ul>
+            </section>
+
+            <section class="about-section" id="bigger-picture" aria-label="The Bigger Picture">
+              <h2>The Bigger Picture</h2>
+              <p>Barty is about more than prices. It is about helping people make better everyday decisions with technology that is useful, trustworthy, and genuinely on the user's side.</p>
+              <p>Through Eidos Group, it is also about creating wider social good through responsible growth, stronger partnerships, and better access to opportunity.</p>
+
+              <div class="about-signoff">
+                <div>
+                  <h3>Barty</h3>
+                  <p>Smarter shopping, without the effort.</p>
+                </div>
+                <div>
+                  <h3>Eidos Group</h3>
+                  <p>Building useful technology with real-world impact.</p>
+                </div>
+              </div>
+            </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
