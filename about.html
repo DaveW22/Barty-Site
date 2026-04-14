@@ -308,6 +308,31 @@
       font-size: 0.92rem;
     }
 
+    .site-footer {
+      padding: 1.8rem 0 2.3rem;
+      border-top: 1px solid rgba(11, 122, 93, 0.1);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--brand-strong);
+    }
+
     @media (max-width: 900px) {
       .about-page-points {
         grid-template-columns: 1fr;
@@ -349,7 +374,7 @@
         <a href="index.html#features">Features</a>
         <a href="index.html#why-barty">Why Barty</a>
         <a href="about.html">About Barty</a>
-        <a href="index.html#download" class="btn">Join early access</a>
+        <a href="index.html#waitlist" class="btn">Join early access</a>
       </nav>
     </div>
   </header>
@@ -552,5 +577,15 @@
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>© 2026 Barty. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -557,6 +557,8 @@
     }
 
     .benefit-card {
+      display: flex;
+      flex-direction: column;
       background: rgba(255,255,255,0.86);
       border: 1px solid var(--line);
       border-radius: 24px;
@@ -580,6 +582,43 @@
     .benefit-card p {
       margin: 0.7rem 0 0;
       color: var(--muted);
+    }
+
+    .benefit-list {
+      margin: 0.85rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .benefit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .benefit-list li::before {
+      content: "";
+      flex: 0 0 9px;
+      width: 9px;
+      height: 9px;
+      margin-top: 0.38rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      box-shadow: 0 0 0 4px rgba(55, 156, 104, 0.12);
+    }
+
+    .benefit-note {
+      margin-top: auto;
+      padding-top: 0.95rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
 
     .benefit-art {
@@ -1057,6 +1096,12 @@
             <p>
               See better-value options across your list instead of guessing where the best prices are.
             </p>
+            <ul class="benefit-list">
+              <li>Compare products across stores in one clear view.</li>
+              <li>Spot cheaper swaps without compromising your full basket.</li>
+              <li>Make quicker decisions with less second-guessing at checkout.</li>
+            </ul>
+            <div class="benefit-note">More confidence before you buy, not after.</div>
           </article>
 
           <article class="benefit-card">
@@ -1065,6 +1110,12 @@
             <p>
               Maximise savings by knowing when it is worth splitting your basket between stores.
             </p>
+            <ul class="benefit-list">
+              <li>See when a split shop actually saves enough to matter.</li>
+              <li>Avoid extra trips that cost more time than they save money.</li>
+              <li>Balance convenience and savings in one decision.</li>
+            </ul>
+            <div class="benefit-note">Useful when it helps, simple when it does not.</div>
           </article>
 
           <article class="benefit-card">
@@ -1073,6 +1124,12 @@
             <p>
               Instantly see what you could save on each shop instead of relying on vague price comparisons.
             </p>
+            <ul class="benefit-list">
+              <li>Get basket-level savings instead of isolated item prices.</li>
+              <li>Understand the trade-offs behind each recommendation.</li>
+              <li>Know what changed your total before you commit.</li>
+            </ul>
+            <div class="benefit-note">Straightforward numbers that are easy to trust.</div>
           </article>
 
           <article class="benefit-card">
@@ -1081,6 +1138,12 @@
             <p>
               Cut unnecessary overspending and stick to your grocery budget more confidently.
             </p>
+            <ul class="benefit-list">
+              <li>Reduce impulse overspend caused by unclear pricing.</li>
+              <li>Shop more consistently against your weekly budget.</li>
+              <li>Keep more value in everyday essentials over time.</li>
+            </ul>
+            <div class="benefit-note">Small basket improvements that add up week after week.</div>
           </article>
         </div>
       </div>
@@ -1122,8 +1185,8 @@
     <div class="container footer-row">
       <div>© 2026 Barty. All rights reserved.</div>
       <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
       </div>
     </div>
   </footer>

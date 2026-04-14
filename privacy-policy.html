@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Barty</title>
+  <meta
+    name="description"
+    content="Read the Barty privacy policy for information about how we collect, use, and protect personal data."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #f3f6f8;
+      --bg-soft: #eaf2f0;
+      --surface: rgba(255, 255, 255, 0.9);
+      --text: #0f172a;
+      --muted: #475569;
+      --brand: #0b7a5d;
+      --brand-strong: #085e48;
+      --brand-soft: #e7f7f2;
+      --border: rgba(11, 122, 93, 0.16);
+      --shadow: 0 20px 48px rgba(8, 94, 72, 0.12);
+      --shadow-soft: 0 12px 28px rgba(8, 94, 72, 0.08);
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(11, 122, 93, 0.12), transparent 36%),
+        radial-gradient(circle at 90% 8%, rgba(15, 118, 110, 0.1), transparent 30%),
+        linear-gradient(180deg, var(--bg), var(--bg-soft) 42%, var(--bg));
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    .brand {
+      font-family: "Sora", "Manrope", "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(243, 246, 248, 0.86);
+      border-bottom: 1px solid rgba(11, 122, 93, 0.1);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.06rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, var(--brand), #0c8a69);
+      color: #fff;
+      box-shadow: 0 12px 22px rgba(8, 94, 72, 0.32);
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover,
+    .footer-links a:hover {
+      color: var(--brand-strong);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.72rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.9);
+      font-weight: 700;
+    }
+
+    .legal-page {
+      padding: 3.8rem 0;
+    }
+
+    .legal-shell {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .legal-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand-strong);
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .legal-shell h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+      max-width: 14ch;
+    }
+
+    .lede {
+      margin: 1rem 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .meta {
+      margin-top: 1rem;
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: #fcfffe;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .legal-sections {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .legal-section {
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.3rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .legal-section h2 {
+      margin: 0 0 0.7rem;
+      font-size: 1.28rem;
+      letter-spacing: -0.03em;
+    }
+
+    .legal-section p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .legal-section p + p,
+    .legal-section ul {
+      margin-top: 0.8rem;
+    }
+
+    .legal-list {
+      padding-left: 1.2rem;
+      color: var(--text);
+      display: grid;
+      gap: 0.45rem;
+      line-height: 1.6;
+    }
+
+    .site-footer {
+      padding: 1.8rem 0 2.3rem;
+      border-top: 1px solid rgba(11, 122, 93, 0.1);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links a:not(.btn) {
+        display: none;
+      }
+
+      .legal-shell {
+        padding: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Barty home">
+        <span class="brand-mark">B</span>
+        <span>Barty</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About Barty</a>
+        <a href="terms-of-service.html">Terms</a>
+        <a href="index.html#waitlist" class="btn">Join early access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-page" aria-label="Privacy policy page">
+      <div class="container">
+        <div class="legal-shell">
+          <div class="legal-eyebrow">Privacy Policy</div>
+          <h1>Your data, handled with care.</h1>
+          <p class="lede">
+            This Privacy Policy explains how Barty collects, uses, stores, and protects personal information when you visit the Barty website or join the waitlist.
+          </p>
+          <div class="meta">
+            Last updated: April 15, 2026
+          </div>
+
+          <div class="legal-sections">
+            <section class="legal-section">
+              <h2>What this policy covers</h2>
+              <p>
+                This policy applies to the Barty marketing website, including the waitlist signup form and any pre-launch updates sent in connection with that form. It covers information you provide directly and limited technical information generated when you use the site.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <h2>Information we collect</h2>
+              <p>We may collect:</p>
+              <ul class="legal-list">
+                <li>Your email address when you join the Barty waitlist.</li>
+                <li>Basic technical information such as IP address, browser type, device information, and server logs collected by hosting or form-processing providers.</li>
+                <li>Any information you choose to share if you reply to a Barty email or contact us directly.</li>
+              </ul>
+            </section>
+
+            <section class="legal-section">
+              <h2>How we use your information</h2>
+              <ul class="legal-list">
+                <li>To manage the waitlist and send launch, access, or product-related updates.</li>
+                <li>To operate, secure, and improve the website.</li>
+                <li>To respond to requests, questions, or support messages.</li>
+                <li>To understand early interest in Barty at an aggregated level.</li>
+              </ul>
+            </section>
+
+            <section class="legal-section">
+              <h2>Legal bases</h2>
+              <p>
+                Where applicable, we rely on your consent when you submit your email for waitlist communications, and on legitimate interests to keep the site secure, prevent misuse, and improve how the service is presented.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <h2>Sharing and service providers</h2>
+              <p>
+                We may share information with trusted providers that help us run the site and waitlist, such as website hosting and form-processing tools. For example, the current waitlist form is submitted through Formspree. We do not sell personal data.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <h2>Cookies and tracking</h2>
+              <p>
+                The site does not currently advertise the use of personalised advertising or analytics cookies. However, basic technical logs and essential service-provider processing may still occur as part of delivering the website and submitting forms.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <h2>Data retention</h2>
+              <p>
+                We keep personal information only for as long as it is reasonably necessary for the purposes described in this policy, including managing the waitlist, meeting legal obligations, resolving disputes, and maintaining security records.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <h2>Your rights</h2>
+              <p>
+                Depending on where you are located, you may have rights to access, correct, delete, restrict, or object to the use of your personal data, and in some cases request a copy of it. You may also withdraw consent for waitlist emails at any time by using the unsubscribe option in those messages.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <h2>Data security</h2>
+              <p>
+                We use reasonable organisational and technical measures to protect personal information against unauthorised access, loss, misuse, or disclosure. No internet-based service can guarantee absolute security, but we aim to keep data handling proportionate and responsible.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <h2>Changes to this policy</h2>
+              <p>
+                We may update this Privacy Policy from time to time as the Barty service develops. When we make material changes, we will update the date on this page and publish the revised version here.
+              </p>
+            </section>
+
+            <section class="legal-section">
+              <h2>Contact and requests</h2>
+              <p>
+                If you have a privacy question or want to exercise a data right, contact Barty using the contact details provided on this website or in communications sent by Barty.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>© 2026 Barty. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
